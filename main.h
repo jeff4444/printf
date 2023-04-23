@@ -1,7 +1,5 @@
 #ifndef main_h
 #define main_h
-#include <stdlib.h>
-// printf
 int _putchar(char c);
 void print_hex(long long n);
 void print_oct(long long n);
