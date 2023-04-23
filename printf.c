@@ -4,39 +4,39 @@
 /**
  * _printf - prints a formatted string to the stdout
  *
- * s: input string
- * @...: other arguments
+ * @format: string input
  */
-int _printf(char const *s, ...)
+int _printf(char const *format, ...)
 {
 	int i;
 
 	va_list args;
 
-	va_start(args, s);
+	va_start(args, format);
 
 	i = 0;
-	while (s[i] != '\0')
+	while (format[i] != '\0')
 	{
-		if (s[i] == '%')
+		if (format[i] == '%')
 		{
-			if (s[i + 1] == 'd' || s[i + 1] == 'i' || s[i + 1] == 'u')
+			if (format[i + 1] == 'd' || format[i + 1] == 'i' ||
+					format[i + 1] == 'u')
 			{
 				int x = va_arg(args, int);
 
 				print_int(x);
 				i += 2;
 			}
-			else if (s[i + 1] == 'f')
+			else if (format[i + 1] == 'f')
 			{
 				double x = va_arg(args, double);
 
 				print_float(x);
 				i += 2;
 			}
-			else if (s[i + 1] == '.')
+			else if (format[i + 1] == '.')
 			{
-				if (s[i + 3] == 'f')
+				if (format[i + 3] == 'f')
 				{
 					double x = va_arg(args, double);
 
@@ -44,49 +44,49 @@ int _printf(char const *s, ...)
 				}
 				i += 4;
 			}
-			else if (s[i + 1] == 's')
+			else if (format[i + 1] == 's')
 			{
 				char const *x = va_arg(args, char*);
 
 				print_string(x);
 				i += 2;
 			}
-			else if (s[i + 1] == 'c')
+			else if (format[i + 1] == 'c')
 			{
 				int x = va_arg(args, int);
 
 				_putchar(x);
 				i += 2;
 			}
-			else if (s[i + 1] == 'x')
+			else if (format[i + 1] == 'x')
 			{
 				long x = va_arg(args, long);
 
 				print_hex_x(x);
 				i += 2;
 			}
-			else if (s[i + 1] == 'X')
+			else if (format[i + 1] == 'X')
 			{
 				long x = va_arg(args, long);
 
 				print_hex_x_caps(x);
 				i += 2;
 			}
-			else if (s[i + 1] == 'p')
+			else if (format[i + 1] == 'p')
 			{
 				long x = va_arg(args, long);
 
 				print_hex(x);
 				i += 2;
 			}
-			else if (s[i + 1] == 'o')
+			else if (format[i + 1] == 'o')
 			{
 				long x = va_arg(args, long);
 
 				print_oct(x);
 				i += 2;
 			}
-			else if (s[i + 1] == '%')
+			else if (format[i + 1] == '%')
 			{
 				_putchar('%');
 				i += 2;
@@ -101,7 +101,7 @@ int _printf(char const *s, ...)
 		}
 		else
 		{
-			_putchar(s[i]);
+			_putchar(format[i]);
 			i++;
 		}
 	}
