@@ -41,7 +41,7 @@ int test_s(const char *s, int i, va_list args)
 		}
 		else
 		{
-			_putchar(s[i]);
+			charact(s[i]);
 			i++;
 		}
 	}

@@ -1,7 +1,7 @@
 #ifndef main_h
 #define main_h
 #include <stdarg.h>
-int _putchar(char c);
+int charact(char c);
 void print_hex(long n);
 void print_oct(long n);
 char hex_dec(long n);

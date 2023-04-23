@@ -132,7 +132,7 @@ void print_hex(long n)
 
 	for (i = 0; i < 16; i++)
 	{
-		_putchar(s[i]);
+		charact(s[i]);
 	}
 }
 
@@ -176,7 +176,7 @@ void print_hex_x(long n)
 	{
 		if (i > 7)
 		{
-			_putchar(s[i]);
+			charact(s[i]);
 		}
 
 	}
@@ -223,7 +223,7 @@ void print_hex_x_caps(long n)
 	{
 		if (i > 7)
 		{
-			_putchar(s[i]);
+			charact(s[i]);
 		}
 
 	}

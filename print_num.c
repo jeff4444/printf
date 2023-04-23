@@ -11,7 +11,7 @@ void print_nums(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		charact('-');
 		n = -n;
 	}
 
@@ -23,7 +23,7 @@ void print_nums(int n)
 	{
 		fact = n / pow;
 		n -= (pow * fact);
-		_putchar(fact + '0');
+		charact(fact + '0');
 		if (n == 0)
 		{
 			tracker = 0;
@@ -38,13 +38,13 @@ void print_nums(int n)
 	}
 	if (n != 0)
 	{
-		_putchar(n + '0');
+		charact(n + '0');
 	}
 	else
 	{
 		for (i = 0; i < tracker; i++)
 		{
-			_putchar('0');
+			charact('0');
 		}
 	}
 }

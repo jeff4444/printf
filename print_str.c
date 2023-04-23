@@ -11,7 +11,7 @@ void print_string(const char *s)
 
 	while (s[j] != '\0')
 	{
-		_putchar(s[j]);
+		charact(s[j]);
 		j++;
 	}
 }
