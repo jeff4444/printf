@@ -7,12 +7,14 @@
  */
 void print_nums(int n)
 {
+    int pow, fact, tracker, i;
+
     if (n < 0)
     {
         _putchar('-');
         n = -n;
     }
-    int pow, fact, tracker, i;
+
     pow = 10;
     while ((pow * 10) <= n)
         pow *= 10;

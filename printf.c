@@ -9,7 +9,7 @@
  */
 int _printf(char const *s, ...)
 {
-    int j, i;
+    int i;
 
     va_list args;
 
@@ -68,25 +68,25 @@ int _printf(char const *s, ...)
             }
             else if (s[i + 1] == 'x')
             {
-                long long x = va_arg(args, long long);
+                long x = va_arg(args, long);
                 print_hex_x(x);
                 i += 2;
             }
             else if (s[i + 1] == 'X')
             {
-                long long x = va_arg(args, long long);
+                long x = va_arg(args, long);
                 print_hex_x_caps(x);
                 i += 2;
             }
             else if (s[i + 1] == 'p')
             {
-                long long x = va_arg(args, long long);
+                long x = va_arg(args, long);
                 print_hex(x);
                 i += 2;
             }
             else if (s[i + 1] == 'o')
             {
-                long long x = va_arg(args, long long);
+                long x = va_arg(args, long);
                 print_oct(x);
                 i += 2;
             }

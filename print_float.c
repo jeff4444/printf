@@ -7,6 +7,7 @@
 void print_float(double n)
 {
     int i, j;
+
     i = (int)n;
     print_nums(i);
     n -= i;
@@ -28,12 +29,12 @@ void print_float(double n)
  */
 void print_float_spec(double n, char c)
 {
-    int pow;
+    int pow, i, j;
+
     char s[1];
     s[0] = c;
     pow = _atoi(s);
 
-    int i, j;
     i = (int)n;
     print_nums(i);
     n -= i;

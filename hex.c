@@ -6,7 +6,7 @@
  * @param n: input
  * @return character equivalent of n
  */
-char hex_dec(long long n)
+char hex_dec(long n)
 {
     switch (n)
     {
@@ -70,7 +70,7 @@ char hex_dec(long long n)
  * @param n: input
  * @return character equivalent of n
  */
-char hex_dec_caps(long long n)
+char hex_dec_caps(long n)
 {
     switch (n)
     {
@@ -133,9 +133,9 @@ char hex_dec_caps(long long n)
  * 
  * @param n: input
  */
-void print_hex(long long n)
+void print_hex(long n)
 {
-    long long hex;
+    long hex;
     char s[16];
     int i;
     char temp;
@@ -175,9 +175,9 @@ void print_hex(long long n)
  * 
  * @param n: input
  */
-void print_hex_x(long long n)
+void print_hex_x(long n)
 {
-    long long hex;
+    long hex;
     char s[16];
     int i;
     char temp;
@@ -221,9 +221,9 @@ void print_hex_x(long long n)
  * 
  * @param n: input
  */
-void print_hex_x_caps(long long n)
+void print_hex_x_caps(long n)
 {
-    long long hex;
+    long hex;
     char s[16];
     int i;
     char temp;
@@ -267,9 +267,9 @@ void print_hex_x_caps(long long n)
  * 
  * @param n: input
  */
-void print_oct(long long n)
+void print_oct(long n)
 {
-    long long hex;
+    long hex;
     char s[8];
     int i;
     char temp;
