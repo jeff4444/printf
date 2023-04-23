@@ -11,7 +11,7 @@ void print_nums(int n);
 void print_string(const char *s);
 void print_float(double n);
 void print_float_spec(double n, char spec);
-int _printf(char const *s, ...);
+int _printf(char const *format, ...);
 int _atoi(char *s);
 void print_hex_x_caps(long n);
 void scientific_notation(double n);
