@@ -10,7 +10,7 @@ void scientific_notation(double n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		charact('-');
 		n = -n;
 	}
 
@@ -22,13 +22,13 @@ void scientific_notation(double n)
 			fact++;
 		}
 		print_float(n);
-		_putchar('e');
-		_putchar('+');
+		charact('e');
+		charact('+');
 		print_nums(fact);
 	}
 	else if (n == 0)
 	{
-		_putchar('0');
+		charact('0');
 	}
 	else
 	{
@@ -38,7 +38,7 @@ void scientific_notation(double n)
 			fact--;
 		}
 		print_float(n);
-		_putchar('e');
+		charact('e');
 		print_nums(fact);
 	}
 }
@@ -55,7 +55,7 @@ void scientific_notation_caps(double n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		charact('-');
 		n = -n;
 	}
 
@@ -67,13 +67,13 @@ void scientific_notation_caps(double n)
 			fact++;
 		}
 		print_float(n);
-		_putchar('E');
-		_putchar('+');
+		charact('E');
+		charact('+');
 		print_nums(fact);
 	}
 	else if (n == 0)
 	{
-		_putchar('0');
+		charact('0');
 	}
 	else
 	{
@@ -83,7 +83,7 @@ void scientific_notation_caps(double n)
 			fact--;
 		}
 		print_float(n);
-		_putchar('E');
+		charact('E');
 		print_nums(fact);
 	}
 }

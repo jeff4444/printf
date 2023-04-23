@@ -11,7 +11,7 @@ void print_float(double n)
 	i = (int)n;
 	print_nums(i);
 	n -= i;
-	_putchar('.');
+	charact('.');
 
 	for (j = 0; j < 6; j++)
 	{
@@ -38,7 +38,7 @@ void print_float_spec(double n, char c)
 	i = (int)n;
 	print_nums(i);
 	n -= i;
-	_putchar('.');
+	charact('.');
 
 	for (j = 0; j < pow; j++)
 	{
