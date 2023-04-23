@@ -11,62 +11,45 @@ char hex_dec(long n)
 	switch (n)
 	{
 		case 0:
-			return '0';
-			break;
+			return ('0');
 		case 1:
-        		return '1';
-		        break;
+			return ('1');
 		case 2:
-		        return '2';
-		        break;
- 		case 3:
-		        return '3';
-		        break;
+			return ('2');
+		case 3:
+			return ('3');
 		case 4:
-		        return '4';
-		        break;
+			return ('4');
 		case 5:
-		        return '5';
-		        break;
+			return ('5');
 		case 6:
-		        return '6';
-		        break;
+			return ('6');
 		case 7:
-		        return '7';
-		        break;
+			return ('7');
 		case 8:
-		        return '8';
-		        break;
+			return ('8');
 		case 9:
-		        return '9';
-		        break;
+			return ('9');
 		case 10:
-		        return 'a';
-		        break;
+			return ('a');
 		case 11:
-		        return 'b';
-		        break;
+			return ('b');
 		case 12:
-		        return 'c';
-		        break;
+			return ('c');
 		case 13:
-		        return 'd';
-		        break;
+			return ('d');
 		case 14:
-		        return 'e';
-		        break;
+			return ('e');
 		case 15:
-		        return 'f';
-		        break;
+			return ('f');
 		default:
-		        return 'n';
-		        break;
+			return ('n');
 	}
 }
 
 /**
  * hex_dec_caps - matches remainders to their equivalent characters in caps
- * 
+ *
  * @n: input
  * Return: character equivalent of n
  */
@@ -75,56 +58,39 @@ char hex_dec_caps(long n)
 	switch (n)
 	{
 		case 0:
-		        return '0';
-		        break;
+			return ('0');
 		case 1:
-		        return '1';
-		        break;
+			return ('1');
 		case 2:
-		        return '2';
-		        break;
+			return ('2');
 		case 3:
-		        return '3';
-		        break;
+			return ('3');
 		case 4:
-		        return '4';
-		        break;
+			return ('4');
 		case 5:
-		        return '5';
-		        break;
+			return ('5');
 		case 6:
-		        return '6';
-		        break;
+			return ('6');
 		case 7:
-		        return '7';
-		        break;
+			return ('7');
 		case 8:
-		        return '8';
-		        break;
+			return ('8');
 		case 9:
-		        return '9';
-		        break;
+			return ('9');
 		case 10:
-		        return 'A';
-		        break;
+			return ('A');
 		case 11:
-		        return 'B';
-		        break;
+			return ('B');
 		case 12:
-		        return 'C';
-		        break;
+			return ('C');
 		case 13:
-		        return 'D';
-		        break;
+			return ('D');
 		case 14:
-		        return 'E';
-		        break;
+			return ('E');
 		case 15:
-		        return 'F';
-		        break;
+			return ('F');
 		default:
-		        return '0';
-		        break;
+			return ('0');
 	}
 }
 
@@ -142,158 +108,118 @@ void print_hex(long n)
 
 	for (i = 0; i < 16; i++)
 	{
-        	if (n > 15)
-        	{
+		if (n > 15)
+		{
 			hex = n / 16;
-        		n -= hex * 16;
-            		s[i] = hex_dec(n);
-            		n = hex;
+			n -= hex * 16;
+			s[i] = hex_dec(n);
+			n = hex;
 		}
 	}
-        else
-        {
+	else
+	{
 		s[i] = hex_dec(n);
-            	n = 0;
-        }
+		n = 0;
+	}
 
-    	for (i = 0; i < 8; i++)
-    	{
-        	temp = s[i];
-        	s[i] = s[16 - i -1];
-        	s[16 - i - 1] = temp;
-    	}
+	for (i = 0; i < 8; i++)
+	{
+		temp = s[i];
+		s[i] = s[16 - i - 1];
+		s[16 - i - 1] = temp;
+	}
 
-    	for (i = 0; i < 16; i++)
-    	{
-        	_putchar(s[i]);
-    	}
+	for (i = 0; i < 16; i++)
+	{
+		_putchar(s[i]);
+	}
 }
 
 /**
  * print_hex_x - converts a long to hexadecimal which is 8 char long
- * 
+ *
  * @n: input
  */
 void print_hex_x(long n)
 {
-    	long hex;
-    	char s[16];
-    	int i;
-    	char temp;
+	long hex;
+	char s[16];
+	int i;
+	char temp;
 
-    	for (i = 0; i < 16; i++)
-    	{
-        	if (n > 15)
-        	{
-            		hex = n / 16;
-            		n -= hex * 16;
-            		s[i] = hex_dec(n);
-            		n = hex;
+	for (i = 0; i < 16; i++)
+	{
+		if (n > 15)
+		{
+			hex = n / 16;
+			n -= hex * 16;
+			s[i] = hex_dec(n);
+			n = hex;
 		}
-        }
-        else
-        {
-            	s[i] = hex_dec(n);
-            	n = 0;
-        }
-
-    	for (i = 0; i < 8; i++)
-    	{
-        	temp = s[i];
-        	s[i] = s[16 - i -1];
-        	s[16 - i - 1] = temp;
+	}
+	else
+	{
+		s[i] = hex_dec(n);
+		n = 0;
 	}
 
-    	for (i = 0; i < 16; i++)
-    	{
-        	if (i > 7)
-        	{
-            		_putchar(s[i]);
-        	}
+	for (i = 0; i < 8; i++)
+	{
+		temp = s[i];
+		s[i] = s[16 - i - 1];
+		s[16 - i - 1] = temp;
+	}
+
+	for (i = 0; i < 16; i++)
+	{
+		if (i > 7)
+		{
+			_putchar(s[i]);
+		}
 	}
 }
 
 /**
- * print_hex_x_caps - converts a long to hexadecimal which is 8 char long in caps
+ * print_hex_x_caps - converts a long to
+ * hexadecimal which is 8 char long in caps
  *
  * @n: input
  */
 void print_hex_x_caps(long n)
 {
-    	long hex;
-    	char s[16];
-    	int i;
-    	char temp;
+	long hex;
+	char s[16];
+	int i;
+	char temp;
 
-    	for (i = 0; i < 16; i++)
-    	{
-        	if (n > 15)
-        	{
-            		hex = n / 16;
-            		n -= hex * 16;
-            		s[i] = hex_dec_caps(n);
-            		n = hex;
+	for (i = 0; i < 16; i++)
+	{
+		if (n > 15)
+		{
+			hex = n / 16;
+			n -= hex * 16;
+			s[i] = hex_dec_caps(n);
+			n = hex;
 		}
-        }
-        else
-        {
-            	s[i] = hex_dec_caps(n);
-            	n = 0;
-        }
-
-    	for (i = 0; i < 8; i++)
-    	{
-        	temp = s[i];
-        	s[i] = s[16 - i -1];
-        	s[16 - i - 1] = temp;
+	}
+	else
+	{
+		s[i] = hex_dec_caps(n);
+		n = 0;
 	}
 
-    	for (i = 0; i < 16; i++)
-    	{
-        	if (i > 7)
-        	{
-            		_putchar(s[i]);
-        	}
+	for (i = 0; i < 8; i++)
+	{
+		temp = s[i];
+		s[i] = s[16 - i - 1];
+		s[16 - i - 1] = temp;
 	}
-}
 
-/**
- * @print_oct - converts a long to octate which is 8 char long
- * 
- * @n: input
- */
-void print_oct(long n)
-{
-    	long hex;
-    	char s[8];
-    	int i;
-    	char temp;
-
-    	for (i = 0; i < 8; i++)
-    	{
-        	if (n > 7)
-        	{
-            		hex = n / 8;
-            		n -= hex * 8;
-            		s[i] = hex_dec(n);
-            		n = hex;
+	for (i = 0; i < 16; i++)
+	{
+		if (i > 7)
+		{
+			_putchar(s[i]);
 		}
-        }
-        else
-        {
-            	s[i] = hex_dec(n);
-            	n = 0;
-        }
-
-    	for (i = 0; i < 4; i++)
-    	{
-        	temp = s[i];
-        	s[i] = s[8 - i -1];
-        	s[8 - i - 1] = temp;
 	}
-
-    	for (i = 0; i < 8; i++)
-    	{
-        	_putchar(s[i]);
-    	}
 }
