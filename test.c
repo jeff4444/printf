@@ -23,7 +23,7 @@ int test_s(const char *s, int i, va_list args)
 			}
 			else if (s[i + 1] == 'c')
 			{
-				_putchar(va_arg(args, int));
+				charact(va_arg(args, int));
 			}
 			else if (s[i + 1] == 'x')
 			{
