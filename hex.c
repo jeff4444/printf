@@ -2,7 +2,7 @@
 
 /**
  * hex_dec - matches remainders to their equivalent characters
- * 
+ *
  * @n: input
  * Return: character equivalent of n
  */
@@ -49,7 +49,7 @@ char hex_dec(long n)
 
 /**
  * hex_dec_caps - matches remainders to their equivalent characters in caps
- * 
+ *
  * @n: input
  * Return: character equivalent of n
  */
@@ -58,9 +58,9 @@ char hex_dec_caps(long n)
 	switch (n)
 	{
 		case 0:
-			return '0';
+			return ('0');
 		case 1:
-			return '1';
+			return ('1');
 		case 2:
 			return ('2');
 		case 3:
@@ -96,7 +96,7 @@ char hex_dec_caps(long n)
 
 /**
  * print_hex - converts a long to hexadecimal which is 16 char long
- * 
+ *
  * @n: input
  */
 void print_hex(long n)
@@ -126,7 +126,7 @@ void print_hex(long n)
 	for (i = 0; i < 8; i++)
 	{
 		temp = s[i];
-		s[i] = s[16 - i -1];
+		s[i] = s[16 - i - 1];
 		s[16 - i - 1] = temp;
 	}
 
@@ -138,7 +138,7 @@ void print_hex(long n)
 
 /**
  * print_hex_x - converts a long to hexadecimal which is 8 char long
- * 
+ *
  * @n: input
  */
 void print_hex_x(long n)
@@ -168,7 +168,7 @@ void print_hex_x(long n)
 	for (i = 0; i < 8; i++)
 	{
 		temp = s[i];
-		s[i] = s[16 - i -1];
+		s[i] = s[16 - i - 1];
 		s[16 - i - 1] = temp;
 	}
 
@@ -183,8 +183,9 @@ void print_hex_x(long n)
 }
 
 /**
- * print_hex_x_caps - converts a long to hexadecimal which is 8 char long in caps
- * 
+ * print_hex_x_caps - converts a long
+ * to hexadecimal which is 8 char long in caps
+ *
  * @n: input
  */
 void print_hex_x_caps(long n)
@@ -214,7 +215,7 @@ void print_hex_x_caps(long n)
 	for (i = 0; i < 8; i++)
 	{
 		temp = s[i];
-		s[i] = s[16 - i -1];
+		s[i] = s[16 - i - 1];
 		s[16 - i - 1] = temp;
 	}
 

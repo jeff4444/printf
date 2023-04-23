@@ -2,7 +2,7 @@
 /**
  * print_float - printf a floating point number to six decimal places
  *
- * @n: float 
+ * @n: float
  */
 void print_float(double n)
 {

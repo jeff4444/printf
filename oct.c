@@ -31,7 +31,7 @@ void print_oct(long n)
 	for (i = 0; i < 4; i++)
 	{
 		temp = s[i];
-		s[i] = s[8 - i -1];
+		s[i] = s[8 - i - 1];
 		s[8 - i - 1] = temp;
 	}
 

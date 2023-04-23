@@ -7,6 +7,7 @@
 void scientific_notation(double n)
 {
 	int fact = 0;
+
 	if (n < 0)
 	{
 		_putchar('-');
@@ -51,6 +52,7 @@ void scientific_notation(double n)
 void scientific_notation_caps(double n)
 {
 	int fact = 0;
+
 	if (n < 0)
 	{
 		_putchar('-');

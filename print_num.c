@@ -28,10 +28,10 @@ void print_nums(int n)
 		{
 			tracker = 0;
 			while (pow != 1)
-				{
-					pow /= 10;
-					tracker++;
-				}
+			{
+				pow /= 10;
+				tracker++;
+			}
 			break;
 		}
 		pow /= 10;
