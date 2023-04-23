@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_float - a floating point number to six decimal places
- * 
+ *
  * @n: float
  */
 void print_float(double n)
@@ -22,15 +22,15 @@ void print_float(double n)
 
 /**
  * print_float_spec - prints a float to a specified number of decimal places
- * 
+ *
  * @n: float input
  * @c: specified number of decimal places
  */
 void print_float_spec(double n, char c)
 {
 	int pow, i, j;
-
 	char s[1];
+
 	s[0] = c;
 	pow = _atoi(s);
 
