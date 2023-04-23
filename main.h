@@ -31,21 +31,19 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 int _putchar(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 void print_buffer(char buffer[], int *bufferIndex);
-void print_hex(long n);
-void print_oct(va_list types, char buffer[],
+int print_hex(long n);
+int print_oct(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 char hex_dec(long n);
 char hex_dec_caps(long n);
-void print_hex_x(long n);
-void print_int(va_list types, char buffer[],
+int print_hex_x(long n);
+int print_int(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-void print_string(va_list types, char buffer[],
+int print_string(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-void print_float(double n);
-void print_float_spec(double n, char spec);
 int _printf(char const *s, ...);
 int _atoi(char *s);
-void print_hex_x_caps(long n);
+int print_hex_x_caps(long n);
 
 /* Functions to handle other specifiers */
 int get_flags(const char *format, int *i);
