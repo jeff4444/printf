@@ -24,7 +24,7 @@ int _printf(char const *s, ...)
 			{
 				int x = va_arg(args, int);
 
-				print_nums(x);
+				print_int(x);
 				i += 2;
 			}
 			else if (s[i + 1] == 'f')
@@ -32,20 +32,6 @@ int _printf(char const *s, ...)
 				double x = va_arg(args, double);
 
 				print_float(x);
-				i += 2;
-			}
-			else if (s[i + 1] == 'e')
-			{
-				double x = va_arg(args, double);
-
-				scientific_notation(x);
-				i += 2;
-			}
-			else if (s[i + 1] == 'E')
-			{
-				double x = va_arg(args, double);
-
-				scientific_notation_caps(x);
 				i += 2;
 			}
 			else if (s[i + 1] == '.')
