@@ -7,6 +7,13 @@
 
 #define BUFF_SIZE 1024
 
+/* FLAGS */
+#define F_MINUS 1
+#define F_PLUS 2
+#define F_ZERO 4
+#define F_HASH 8
+#define F_SPACE 16
+
 /**
  * struct fmt - Struct op
  *
@@ -23,19 +30,22 @@ int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
 int _putchar(char c);
 void print_hex(long n);
-void print_oct(va_list types, char buffer[], int flags, int width, int precision, int size);
+void print_oct(va_list types, char buffer[], 
+	int flags, int width, int precision, int size);
 char hex_dec(long n);
 char hex_dec_caps(long n);
 void print_hex_x(long n);
-void print_int(va_list types, char buffer[], int flags, int width, int precision, int size);
-void print_string(const char *s);
+void print_int(va_list types, char buffer[], 
+	int flags, int width, int precision, int size);
+void print_string(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
 void print_float(double n);
 void print_float_spec(double n, char spec);
 int _printf(char const *s, ...);
 int _atoi(char *s);
 void print_hex_x_caps(long n);
 
-/* Funciotns to handle other specifiers */
+/* Functions to handle other specifiers */
 int get_flags(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
 int get_precision(const char *format, int *i, va_list list);
