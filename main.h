@@ -28,7 +28,9 @@ typedef struct fmt
 
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
-int _putchar(char c);
+int _putchar(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
+void print_buffer(char buffer[], int *bufferIndex);
 void print_hex(long n);
 void print_oct(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
