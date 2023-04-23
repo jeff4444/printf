@@ -1,49 +1,13 @@
 #include "main.h"
-#include <stdarg.h>
 /**
- * test_s - tests what character
- * @s: checks char
- * @i: number of chars to skip
- * @args: args list
- * Return: number of chars skipped
+ * main - Prints Jeff.
+ * Return: 0
  */
-int test_s(const char *s, int i, va_list args)
+
+int main(void)
 {
-	while (s[i] != '\0')
-	{
-		if (s[i] == '%')
-		{
-			if (s[i + 1] == 'd' || s[i + 1] == 'i' || s[i + 1] == 'u')
-			{
-				print_nums(va_arg(args, int));
-			}
-			else if (s[i + 1] == 's')
-			{
-				print_string(va_arg(args, const char*));
-			}
-			else if (s[i + 1] == 'c')
-			{
-				charact(va_arg(args, int));
-			}
-			else if (s[i + 1] == 'x')
-			{
-				print_hex_x(va_arg(args, long));
-			}
-			else if (s[i + 1] == 'o')
-			{
-				print_oct(va_arg(args, long));
-			}
-			else if (s[i + 1] == '%')
-			{
-				charact('%');
-			}
-			i += 2;
-		}
-		else
-		{
-			charact(s[i]);
-			i++;
-		}
-	}
-	return (i);
+	char *name = "Jeff";
+
+	_printf("My name is %s", name);
+	return (0);
 }

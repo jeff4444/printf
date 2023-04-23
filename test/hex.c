@@ -115,11 +115,12 @@ void print_hex(long n)
 			s[i] = hex_dec(n);
 			n = hex;
 		}
-	}
-	else
-	{
-		s[i] = hex_dec(n);
-		n = 0;
+		else
+		{
+			s[i] = hex_dec(n);
+			n = 0;
+		}
+
 	}
 
 	for (i = 0; i < 8; i++)
@@ -131,7 +132,7 @@ void print_hex(long n)
 
 	for (i = 0; i < 16; i++)
 	{
-		_putchar(s[i]);
+		charact(s[i]);
 	}
 }
 
@@ -156,11 +157,12 @@ void print_hex_x(long n)
 			s[i] = hex_dec(n);
 			n = hex;
 		}
-	}
-	else
-	{
-		s[i] = hex_dec(n);
-		n = 0;
+		else
+		{
+			s[i] = hex_dec(n);
+			n = 0;
+		}
+
 	}
 
 	for (i = 0; i < 8; i++)
@@ -174,14 +176,15 @@ void print_hex_x(long n)
 	{
 		if (i > 7)
 		{
-			_putchar(s[i]);
+			charact(s[i]);
 		}
+
 	}
 }
 
 /**
- * print_hex_x_caps - converts a long to
- * hexadecimal which is 8 char long in caps
+ * print_hex_x_caps - converts a long
+ * to hexadecimal which is 8 char long in caps
  *
  * @n: input
  */
@@ -201,11 +204,12 @@ void print_hex_x_caps(long n)
 			s[i] = hex_dec_caps(n);
 			n = hex;
 		}
-	}
-	else
-	{
-		s[i] = hex_dec_caps(n);
-		n = 0;
+		else
+		{
+			s[i] = hex_dec_caps(n);
+			n = 0;
+		}
+
 	}
 
 	for (i = 0; i < 8; i++)
@@ -219,7 +223,8 @@ void print_hex_x_caps(long n)
 	{
 		if (i > 7)
 		{
-			_putchar(s[i]);
+			charact(s[i]);
 		}
+
 	}
 }

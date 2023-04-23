@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_float - a floating point number to six decimal places
+ * print_float - printf a floating point number to six decimal places
  *
  * @n: float
  */
@@ -11,13 +11,14 @@ void print_float(double n)
 	i = (int)n;
 	print_nums(i);
 	n -= i;
-	_putchar('.');
+	charact('.');
 
 	for (j = 0; j < 6; j++)
 	{
-	n *= 10;
+		n *= 10;
 	}
 	print_nums(n);
+
 }
 
 /**
@@ -37,11 +38,12 @@ void print_float_spec(double n, char c)
 	i = (int)n;
 	print_nums(i);
 	n -= i;
-	_putchar('.');
+	charact('.');
 
 	for (j = 0; j < pow; j++)
 	{
 		n *= 10;
 	}
 	print_nums(n);
+
 }
