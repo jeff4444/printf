@@ -1,5 +1,6 @@
 #ifndef main_h
 #define main_h
+
 int _putchar(char c);
 void print_hex(long n);
 void print_oct(long n);
@@ -15,4 +16,5 @@ int _atoi(char *s);
 void print_hex_x_caps(long n);
 void scientific_notation(double n);
 void scientific_notation_caps(double n);
+
 #endif
