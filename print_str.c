@@ -1,8 +1,6 @@
 #include "main.h"
 /**
- * print_string - prints out a string
- *
- * @s: string to be printed
+ * print_string - Prints a string
  * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
