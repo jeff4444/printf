@@ -9,8 +9,8 @@
  */
 int _printf(char const *s, ...)
 {
-	int i, printed = 0, printed_chars = 0; /* printed_chars is the number of chars
-	printed in buffer and the value to be returned */
+	int i, printed = 0, printed_chars = 0; // printed_chars is the number of chars
+	// printed in buffer and the value to be returned 
 	int flags, width, precision, size, bufferIndex = 0;
 	va_list list;
 	char buffer[BUFF_SIZE];
@@ -40,8 +40,8 @@ int _printf(char const *s, ...)
 			*/
 			++i;
 			printed = handle_print(format, &i, list, buffer,
-				flags, width, precision, size); /* 'the handle_print fxn will 
-				also return	the number of chars that replaced the specifier */
+				flags, width, precision, size); // the handle_print fxn will 
+				// also return	the number of chars that replaced the specifier 
 			if (printed == -1)
 				return (-1);
 			printed_chars += printed;
