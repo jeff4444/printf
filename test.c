@@ -35,7 +35,7 @@ int test_s(const char *s, int i, va_list args)
 			}
 			else if (s[i + 1] == '%')
 			{
-				_putchar('%');
+				charact('%');
 			}
 			i += 2;
 		}
