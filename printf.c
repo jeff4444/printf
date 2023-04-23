@@ -4,13 +4,13 @@
 /**
  * _printf - prints a formatted string to the stdout
  *
- * s: input string
+ * @format: input string
  * @...: other arguments
+ * Return: Printed chars.
  */
-int _printf(char const *s, ...)
+int _printf(const char *format, ...)
 {
-	int i, printed = 0, printed_chars = 0; // printed_chars is the number of chars
-	// printed in buffer and the value to be returned 
+	int i, printed = 0, printed_chars = 0; /* printed_chars is the number of charsprinted in buffer and the value to be returned */
 	int flags, width, precision, size, bufferIndex = 0;
 	va_list list;
 	char buffer[BUFF_SIZE];
