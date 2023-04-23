@@ -37,6 +37,7 @@ int test_s(const char *s, int i, va_list args)
 			{
 				_putchar('%');
 			}
+			i += 2;
 		}
 		else
 		{
