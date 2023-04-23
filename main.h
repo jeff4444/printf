@@ -30,12 +30,12 @@ int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
 int _putchar(char c);
 void print_hex(long n);
-void print_oct(va_list types, char buffer[], 
+void print_oct(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 char hex_dec(long n);
 char hex_dec_caps(long n);
 void print_hex_x(long n);
-void print_int(va_list types, char buffer[], 
+void print_int(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 void print_string(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
