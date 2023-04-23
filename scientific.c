@@ -45,9 +45,9 @@ void scientific_notation(double n)
 
 
 /**
- * @brief prints a double in scientific notation in caps
+ * scientific_notation_caps -  prints a double in scientific notation in caps
  *
- * @param n: double
+ * @n: double
  */
 void scientific_notation_caps(double n)
 {

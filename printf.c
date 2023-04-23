@@ -5,6 +5,8 @@
  * _printf - prints a formatted string to the stdout
  *
  * @s: input string
+ *
+ * Return: the length of s
  */
 int _printf(char const *s, ...)
 {

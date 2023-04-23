@@ -22,7 +22,7 @@ void print_float(double n)
 }
 
 /**
- * print_floaat_spec - prints a float to a specified number of decimal places
+ * print_float_spec - prints a float to a specified number of decimal places
  *
  * @n: float input
  * @c: specified number of decimal places
