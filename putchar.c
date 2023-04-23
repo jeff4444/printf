@@ -6,7 +6,10 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
+int _putchar(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
 {
-	return (write(1, &c, 1));
+	char c = va_arg(types, int);
+
+	return (handle_write_char(c, buffer, flags, width, precision, size));
 }
