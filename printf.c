@@ -4,111 +4,66 @@
 /**
  * _printf - prints a formatted string to the stdout
  *
- * @format: string input
+ * s: input string
+ * @...: other arguments
  */
-int _printf(char const *format, ...)
+int _printf(char const *s, ...)
 {
-	int i;
+	int i, printed = 0, printed_chars = 0; /* printed_chars is the number of chars
+	printed in buffer and the value to be returned */
+	int flags, width, precision, size, bufferIndex = 0;
+	va_list list;
+	char buffer[BUFF_SIZE];
 
-	va_list args;
+	if (format == NULL)
+		return (-1);
 
-	va_start(args, format);
+	va_start(list, format);
 
-	i = 0;
-	while (format[i] != '\0')
+	for (i = 0; format && format[i] != '\0'; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] != '%')
 		{
-			if (format[i + 1] == 'd' || format[i + 1] == 'i' ||
-					format[i + 1] == 'u')
-			{
-				int x = va_arg(args, int);
-
-				print_int(x);
-				i += 2;
-			}
-			else if (format[i + 1] == 'f')
-			{
-				double x = va_arg(args, double);
-
-				print_float(x);
-				i += 2;
-			}
-			else if (format[i + 1] == '.')
-			{
-				if (format[i + 3] == 'f')
-				{
-					double x = va_arg(args, double);
-
-					print_float_spec(x, s[i + 2]);
-				}
-				i += 4;
-			}
-			else if (format[i + 1] == 's')
-			{
-				char const *x = va_arg(args, char*);
-
-				print_string(x);
-				i += 2;
-			}
-			else if (format[i + 1] == 'c')
-			{
-				int x = va_arg(args, int);
-
-				_putchar(x);
-				i += 2;
-			}
-			else if (format[i + 1] == 'x')
-			{
-				long x = va_arg(args, long);
-
-				print_hex_x(x);
-				i += 2;
-			}
-			else if (format[i + 1] == 'X')
-			{
-				long x = va_arg(args, long);
-
-				print_hex_x_caps(x);
-				i += 2;
-			}
-			else if (format[i + 1] == 'p')
-			{
-				long x = va_arg(args, long);
-
-				print_hex(x);
-				i += 2;
-			}
-			else if (format[i + 1] == 'o')
-			{
-				long x = va_arg(args, long);
-
-				print_oct(x);
-				i += 2;
-			}
-			else if (format[i + 1] == '%')
-			{
-				_putchar('%');
-				i += 2;
-			}
-			else
-			{
-				char const *x = "No error";
-
-				print_string(x);
-				i += 2;
-			}
+			buffer[bufferIndex++] = format[i];
+			if (bufferIndex == BUFF_SIZE)
+				print_buffer(buffer, &bufferIndex);
+			printed_chars++;
 		}
 		else
 		{
-			_putchar(format[i]);
-			i++;
+			print_buffer(buffer, &bufferIndex);
+			/*
+			flags = get_flags(format, &i);
+			width = get_width(format, &i, list);
+			precision = get_precision(format, &i, list);
+			size = get_size(format, &i);
+			*/
+			++i;
+			printed = handle_print(format, &i, list, buffer,
+				flags, width, precision, size); /* 'the handle_print fxn will 
+				also return	the number of chars that replaced the specifier */
+			if (printed == -1)
+				return (-1);
+			printed_chars += printed;
 		}
 	}
 
-	va_end(args);
+	print_buffer(buffer, &bufferIndex);
 
-	return (i);
+	va_end(list);
+
+	return (printed_chars);
 }
 
+/**
+ * print_buffer - Prints the contents of the buffer if it exist
+ * @buffer: Array of chars
+ * @bufferIndex: Index at which to add next char, represents the length.
+ */
+void print_buffer(char buffer[], int *bufferIndex)
+{
+	if (*bufferIndex > 0)
+		write(1, &buffer[0], *bufferIndex);
 
+	*bufferIndex = 0;
+}
