@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 {
 	int i, printed = 0, printed_chars = 0; /* printed_chars is the number */
 	/* of charsprinted in buffer and the value to be returned */
-	int flags, width, precision, size, bufferIndex = 0;
+	int flags = 0, width = 0, precision = 0, size = 0, bufferIndex = 0;
 	va_list list;
 	char buffer[BUFF_SIZE];
 

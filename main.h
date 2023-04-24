@@ -15,6 +15,10 @@
 #define F_HASH 8
 #define F_SPACE 16
 
+/* SIZES */
+#define S_LONG 2
+#define S_SHORT 1
+
 /**
  * struct fmt - Struct op
  *
@@ -32,12 +36,12 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 int _putchar(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 void print_buffer(char buffer[], int *bufferIndex);
-int print_hex(long n);
+void print_hex(long n);
 int print_oct(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 char hex_dec(long n);
 char hex_dec_caps(long n);
-int print_hex_x(long n);
+void print_hex_x(long n);
 int print_int(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_string(va_list types, char buffer[],
