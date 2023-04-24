@@ -51,7 +51,7 @@ int _atoi(char *s);
 void print_hex_x_caps(long n);
 
 /* Functions to handle other specifiers */
-int get_flags(const char *format, int *i);
+int get_flag(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
 int get_precision(const char *format, int *i, va_list list);
 int get_size(const char *format, int *i);
