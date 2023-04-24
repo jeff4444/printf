@@ -32,3 +32,4 @@ int get_flag(const char *format, int *i)
 
 	return (flags);
 }
+

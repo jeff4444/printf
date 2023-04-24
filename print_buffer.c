@@ -12,3 +12,4 @@ void print_buffer(char buffer[], int *bufferIndex)
 
 	*bufferIndex = 0;
 }
+  
