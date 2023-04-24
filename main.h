@@ -36,8 +36,9 @@ int handle_print(const char *fmt, int *i,
 
 int _putchar(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-void print_buffer(char buffer[], int *bufferIndex);
 void print_hex(long n);
+int print_percent(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
 int print_oct(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 char hex_dec(long n);
