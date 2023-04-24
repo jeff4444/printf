@@ -76,7 +76,7 @@ int write_pointer(char buffer[], int ind, int length,
 
 int write_unsgnd(int is_negative, int ind,
 char buffer[], int flags, int width, int precision, int size);
-	
+
 /* Some useful other functions to be used */
 int is_printable(char c);
 int is_digit(char c);
