@@ -1,4 +1,5 @@
-#include <unistd.h>
+#include "main.h"
+
 /**
  * _putchar - Prints a char
  * @types: List a of arguments

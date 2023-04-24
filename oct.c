@@ -11,7 +11,7 @@
  * @size: Size specifier
  * Return: Number of chars printed
  */
-void print_oct(va_list types, char buffer[], int flags, int width,
+int print_oct(va_list types, char buffer[], int flags, int width,
 		int precision, int size)
 {
 

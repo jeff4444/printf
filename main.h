@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
+#define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
 
 /* FLAGS */
@@ -70,7 +71,12 @@ int write_pointer(char buffer[], int ind, int length,
 	int width, int flags, char padd, char extra_c, int padd_start);
 
 int write_unsgnd(int is_negative, int ind,
-char buffer[],
-	int flags, int width, int precision, int size);
+char buffer[], int flags, int width, int precision, int size);
+	
+/* Some useful other functions to be used */
+int is_printable(char c);
+int is_digit(char c);
+long int convert_size_number(long int num, int size);
+long int convert_size_unsgnd(unsigned long int num, int size);
 
 #endif
