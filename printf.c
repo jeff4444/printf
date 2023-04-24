@@ -1,5 +1,7 @@
 #include "main.h"
 
+void print_buffer(char buffer[], int *buffIndex);
+
 /**
  * _printf - prints a formatted string to the stdout
  *
