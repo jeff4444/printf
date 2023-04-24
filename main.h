@@ -48,7 +48,7 @@ int print_string(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int _printf(char const *s, ...);
 int _atoi(char *s);
-int print_hex_x_caps(long n);
+void print_hex_x_caps(long n);
 
 /* Functions to handle other specifiers */
 int get_flags(const char *format, int *i);
