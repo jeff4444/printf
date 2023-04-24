@@ -1,5 +1,5 @@
-#ifndef main_h
-#define main_h
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdarg.h>
 #include <stdio.h>
@@ -32,7 +32,7 @@ typedef struct fmt
 } fmt_t;
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
-va_list list, char buffer[], int flags, int width, int precision, int size);
+	va_list list, char buffer[], int flags, int width, int precision, int size);
 
 int _putchar(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
@@ -56,14 +56,6 @@ int get_width(const char *format, int *i, va_list list);
 int get_precision(const char *format, int *i, va_list list);
 int get_size(const char *format, int *i);
 
-/*Function to print string in reverse*/
-int print_reverse(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
-
-/*Function to print a string in rot 13*/
-int print_rot13string(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
-
 /* width handler */
 int handle_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size);
@@ -75,7 +67,7 @@ int write_pointer(char buffer[], int ind, int length,
 	int width, int flags, char padd, char extra_c, int padd_start);
 
 int write_unsgnd(int is_negative, int ind,
-char buffer[], int flags, int width, int precision, int size);
+	char buffer[], int flags, int width, int precision, int size);
 
 /* Some useful other functions to be used */
 int is_printable(char c);
