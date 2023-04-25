@@ -52,6 +52,10 @@ int print_binary(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int _atoi(char *s);
 void print_hex_x_caps(long n);
+int print_unsigned_int(va_list args, char buffer[], int flags,
+		int width, int precision, int size);
+int print_octate(va_list args, char buffer[], int flags,
+		int width, int precision, int size);
 
 /* Functions to handle other specifiers */
 int get_flag(const char *format, int *i);
