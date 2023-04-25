@@ -91,6 +91,7 @@ int is_printable(char c);
 int is_digit(char c);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
+int append_hexa_code(char ascii_code, char buffer[], int i);
 
 #endif
 
