@@ -152,7 +152,7 @@ int print_binary(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	unsigned int num, b = 1, i;
-	int count = 0;
+	unsigned int count = 0;
 
 	UNUSED(buffer);
 	UNUSED(flags);
