@@ -56,6 +56,10 @@ int print_unsigned_int(va_list args, char buffer[], int flags,
 		int width, int precision, int size);
 int print_octate(va_list args, char buffer[], int flags,
 		int width, int precision, int size);
+int print_hexa(va_list args, char buffer[], int flags, int width,
+		int precision, int size);
+int print_hexa_caps(va_list args, char buffer[], int flags,
+		int width, int precision, int size);
 
 /* Functions to handle other specifiers */
 int get_flag(const char *format, int *i);
