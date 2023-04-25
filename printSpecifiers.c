@@ -181,5 +181,5 @@ int print_binary(va_list types, char buffer[],
 		else
 			write(1, "0", 1);
 	}
-    return (count);
+	return (count);
 }
