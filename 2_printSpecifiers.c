@@ -58,7 +58,7 @@ int print_octate(va_list args, char buffer[], int flags,
 	i = BUFF_SIZE - 2;
 
 	UNUSED(width);
-	
+
 	val = convert_size_unsgnd(val, size);
 	if (val == 0)
 	{
@@ -113,10 +113,10 @@ int print_hexa(va_list args, char buffer[], int flags,
  * Return: number of printed characters
  */
 int print_hexa_caps(va_list args, char buffer[], int flags,
-                int width, int precision, int size)
+	int width, int precision, int size)
 {
-        return (print_hexa_all(args, "0123456789ABCDEF", buffer,
-                                flags, 'X', width, precision, size));
+	return (print_hexa_all(args, "0123456789ABCDEF", buffer,
+			flags, 'X', width, precision, size));
 }
 
 /**
