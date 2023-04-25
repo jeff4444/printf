@@ -154,9 +154,9 @@ int print_hexa_all(va_list args, char str[], char buffer[],
 	buffer[BUFF_SIZE - 1] = '\0';
 	while (val > 0)
 	{
-		buffer[i] = str[num % 16];
+		buffer[i] = str[val % 16];
 		i--;
-		num /= 16;
+		val /= 16;
 	}
 	if (flags & F_HASH && num != 0)
 	{
