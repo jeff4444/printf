@@ -151,9 +151,9 @@ int print_percent(va_list types, char buffer[],
 int print_binary(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	unsigned int num, b = 1;
+	unsigned int num, b, i, sum;
 	unsigned int arr[32];
-	int count, i;
+	int count;
 
 	UNUSED(buffer);
 	UNUSED(flags);
@@ -162,23 +162,23 @@ int print_binary(va_list types, char buffer[],
 	UNUSED(size);
 
 	num = va_arg(types, unsigned int);
-	while (b <= num)
+	b = 2147483648; /* (2 ^ 31) */
+	a[0] = num / b;
+	for (i = 1; i < 32; i++)
 	{
-		b *= 2;
-		count++;
+		b /= 2;
+		arr[i] = (num / b) % 2;
 	}
+	for (i = 0, sum = 0, count = 0; i < 32; i++)
+	{
+		sum += arr[i];
+		if (sum || i == 31)
+		{
+			char z = '0' + arr[i];
 
-	for (i = 0; i < count; i++)
-	{
-		arr[count - i - 1] = num % 2;
-		num = num / 2;
-	}
-	for (i = 0; i < count; i++)
-	{
-		if (arr[i])
-			write(1, "1", 1);
-		else
-			write(1, "0", 1);
+			write(1, &z, 1);
+			count++;
+		}
 	}
 	return (count);
 }
