@@ -64,7 +64,7 @@ int print_hexa_all(va_list args, char str[], char buffer[],
 	int flags, char c, int width, int precision, int size);
 int print_pointer(va_list args, char buffer[], int flags, int width,
 		int precision, int size);
-		
+
 int print_non_printable(va_list args, char buffer[],
 	int flags, int width, int precision, int size);
 /* Functions to handle other specifiers */
