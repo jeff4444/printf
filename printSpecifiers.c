@@ -138,3 +138,48 @@ int print_percent(va_list types, char buffer[],
 	return (write(1, "%%", 1));
 }
 
+/**
+ * print_binary - Prints an unsigned number
+ * @types: Lista of arguments
+ * @buffer: Buffer array to handle print
+ * @flags:  Calculates active flags
+ * @width: get width.
+ * @precision: Precision specification
+ * @size: Size specifier
+ * Return: Numbers of char printed.
+ */
+int print_binary(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
+{
+	unsigned int num, b = 1, i;
+	int count = 0;
+
+	UNUSED(buffer);
+	UNUSED(flags);
+	UNUSED(width);
+	UNUSED(precision);
+	UNUSED(size);
+	num = va_arg(types, unsigned int);
+
+	while (b < num)
+    {
+    	b *= 2;
+    	count++;
+	}
+
+	unsigned int arr[count];
+
+	for (i = 0; i < count; i++)
+	{
+		arr[count - i - 1] = num % 2;
+		num = num / 2;
+	}
+	for (i = 0; i < count; i++)
+	{
+		if (arr[i])
+			write(1, "1", 1);
+		else
+			write(1, "0", 1);
+	}
+    return (count);
+}

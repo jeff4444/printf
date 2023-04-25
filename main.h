@@ -48,6 +48,8 @@ int print_int(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_string(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
+int print_binary(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
 int _atoi(char *s);
 void print_hex_x_caps(long n);
 
