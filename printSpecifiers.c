@@ -162,9 +162,9 @@ int print_binary(va_list types, char buffer[],
 	num = va_arg(types, unsigned int);
 
 	while (b < num)
-    {
-    	b *= 2;
-    	count++;
+	{
+		b *= 2;
+		count++;
 	}
 
 	unsigned int arr[count];
