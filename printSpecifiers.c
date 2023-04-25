@@ -159,8 +159,8 @@ int print_binary(va_list types, char buffer[],
 	UNUSED(width);
 	UNUSED(precision);
 	UNUSED(size);
-	num = va_arg(types, unsigned int);
 
+	num = va_arg(types, unsigned int);
 	while (b < num)
 	{
 		b *= 2;
