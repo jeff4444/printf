@@ -152,7 +152,7 @@ int print_binary(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	unsigned int num, b = 1, i;
-	unsigned int count = 0;
+	unsigned int count = 0, arr[32];
 
 	UNUSED(buffer);
 	UNUSED(flags);
@@ -161,13 +161,11 @@ int print_binary(va_list types, char buffer[],
 	UNUSED(size);
 
 	num = va_arg(types, unsigned int);
-	while (b < num)
+	while (b <= num)
 	{
 		b *= 2;
 		count++;
 	}
-
-	unsigned int arr[count];
 
 	for (i = 0; i < count; i++)
 	{
