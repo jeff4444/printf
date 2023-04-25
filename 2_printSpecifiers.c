@@ -69,6 +69,7 @@ int print_octate(va_list args, char buffer[], int flags,
 	while (val > 0)
 	{
 		buffer[i] = (val % 8) + '0';
+		i--;
 		val /= 8;
 	}
 	if (flags & F_HASH && num != 0)
