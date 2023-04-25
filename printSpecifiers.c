@@ -151,8 +151,9 @@ int print_percent(va_list types, char buffer[],
 int print_binary(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	unsigned int num, b = 1, i;
-	unsigned int count = 0, arr[32];
+	unsigned int num, b = 1;
+	unsigned int arr[32];
+	int count, i;
 
 	UNUSED(buffer);
 	UNUSED(flags);
