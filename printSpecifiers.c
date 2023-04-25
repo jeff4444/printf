@@ -163,7 +163,7 @@ int print_binary(va_list types, char buffer[],
 
 	num = va_arg(types, unsigned int);
 	b = 2147483648; /* (2 ^ 31) */
-	a[0] = num / b;
+	arr[0] = num / b;
 	for (i = 1; i < 32; i++)
 	{
 		b /= 2;
